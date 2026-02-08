@@ -1,0 +1,75 @@
+[RU]___________________________________
+> leave: Скажите ему, чтобы покинуть текущую игровую комнату;
+> master: попросите его дать вам разрешения для мастера комнаты;
+> ready: установите его в лоббистском состоянии на готово;
+> take <класс>: ник на готов <класс>. Заставить его пройти определенный класс (медик, снайпер, инженер, стрелок);
+> follow [ник]: Скажите ему, чтобы следовать за вами или кем-то;
+> invite [ник]: отправить вам приглашение в комнату, в которой он находится (на случай, если вы оставили его в комнате);
+> whois <ник>: восстановить страну и статус лобби любого подключенного игрока;
+> missions: задачи Короны;
+> start: если он хозяин, попробуйте завести комнату;
+> stay: если вы находитесь в комнате, убедитесь, что вы остались, даже если комната была запущена (в течение 1 часа, пока она не покинет текущую комнату);
+> switch: если в PvP, попробуйте сменить команду;
+> unready: если в комнате, не готово, пока оно не получит готовый или не покинет текущую комнату.
+
+> create <ник>: создать новый профиль на сервере;
+> add <ник>: отправить на ник запрос на добавление в друзья;
+> remove <ник>: удалить ник из списка друзей;
+> removeall: удалить всех друзей из списка друзей;
+> open <карта/миссия>: открыть игровую комнату с помощью «карты» (PvP) или «миссии» (PvE). Список «карта» доступен в файле src / pvp_maps.c. «Миссия» - это «тренировка», «легкий», «нормальный», «жесткий», «выживание», «зомби», «зомби-башня», «вулкан», «анубис» или «campaingnsections»;
+> name <roomname>: изменить имя PvP-комнаты;
+> change <карта/миссия>: изменить на «карту» или «миссия». Смотри открыто;
+> safe <карта>: создать безопасную комнату на основе черного списка. Обратите внимание, что бот не будет отвечать на любые приглашения в безопасном режиме. Чтобы заставить его покинуть безопасный режим, используйте команду выйти;
+> channel <канал>: переключиться на «канал»;
+> whisper <ник> <сообщение>: отправить личное сообщение другу из клана помощник;
+> friends: список друзей и единомышленников;
+> sleep [n]: Зависать поток readline на 'n' секунд (1 секунда по умолчанию);
+> stats: список всей статистики загрузки канала;
+> stay <количество> [блок]: если в комнате, не забудьте остаться, даже если комната началась. 'count' - это количество времени, в течение которого «единица» остается (если «единица» не указана, то по умолчанию используется значение в секундах);
+> randombox [<name> <count>]: открыть поля подсчета из случайного окна с именем name. Если ни имя, ни число не указаны, отобразите список доступных случайных коробок и их цену;
+> last <ник>: отображение даты последнего посещения друга или клана;
+> quit: выход из warfacebot;
+
+quickplay <cmd> [arg1]: поиск по Quickplay. 'cmd' должен быть одним из открытых, приглашать, отменять или начинать. «arg1» зависит от используемой команды:
+> open: 'arg1' - это PvE-миссия или PvP-карта быстрой игры;
+> invite: 'arg1' - ник друга;
+> cancel: аргументы игнорируются;
+> start: аргументы игнорируются.
+///////////////////////////////////////
+[EN]___________________________________
+> leave: Tell him to leave the current game room;
+> master: Ask him to give you the room master permissions;
+> ready: Set his to lobby state to ready;
+> take <class>: Alias to ready <class>. Force him to take a specific class (medic, sniper, engineer, rifleman);
+> follow [nickname]: Tell him to follow you or somebody;
+> invite [nickname]: Send you an invitation request to the room he's in (in case you left him in a room);
+> whois <nickname>: Retreive any connected player's country and lobby status;
+> missions: Crown challenge objectives;
+> start: If he's master, try to start the room;
+> stay: If in a room, make sure to stay even if the room started (for 1h, until it leaves the current room);
+> switch: If in PvP, try to switch team;
+> unready: If in a room, keep to unready, until it either receives ready or leaves the current room.
+
+> create <nickname>: Create a new profile on the server;
+> add <nickname>: Send to nickname a friend request;
+> remove <nickname>: Remove nickname from the buddy-list;
+> removeall: Remove all buddies from the buddy-list;
+> open <map/mission>: open a game room with 'map' (PvP) or 'mission' (PvE). The 'map' list is available in the file src/pvp_maps.c. The 'mission' is either 'training', 'easy', 'normal', 'hard', 'survival', 'zombie', 'zombietower', 'volcano', 'anubis', or 'campaingnsections';
+> name <roomname>: Change the name of the PvP room;
+> change <map/mission>: Change to 'map' or 'mission'. See open;
+> safe <map>: Create a blacklist-based safe-room. Notice the bot won't respond to any invite-requests while in safe-mode. To make him leave the safe-mode, use the command leave;
+> channel <channel>: Switch to 'channel';
+> whisper <nickname> <message>: Send a private message to a friend of clan mate;
+> friends: List friends and clanmates;
+> sleep [n]: Hang the readline thread for 'n' seconds (1 second by default);
+> stats: List all channel load statistics;
+> stay <count> [unit]: If in a room, make sure to stay even if the room started. 'count' is the number of time 'unit' to stay (if 'unit' is not given, then default to seconds);
+> randombox [<name> <count>]: Open count boxes from the randombox called name. If neither name nor count is given, display the list of available randomboxes and their price;
+> last <nickname>: Display the last seen date of a friend or a clanmate;
+> quit: Exit warfacebot;
+
+quickplay <cmd> [arg1]: Quickplay matchmaking. 'cmd' should be one of open, invite, cancel or start. 'arg1' depends on the command used:
+> open: 'arg1' is a PvE mission or a PvP quickplay map;
+> invite: 'arg1' is a buddy nickname;
+> cancel: arguments ignored;
+> start: arguments ignored.
